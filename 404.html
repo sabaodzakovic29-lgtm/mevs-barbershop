@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Page Not Found | Mev's Barbershop</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&family=Cinzel:wght@400;500&family=EB+Garamond:ital,wght@0,400;1,400&display=swap" rel="stylesheet"/>
+  <style>
+    *,*::before,*::after{margin:0;padding:0;box-sizing:border-box;}
+    :root{
+      --black:#070705;--gold:#c9a84c;--gold2:#e8c96a;--gold3:#a07830;
+      --cream:#f0e6cc;--warm:#d4b896;--dim:#7a6a50;
+      --border:rgba(201,168,76,0.25);
+    }
+    body{background:var(--black);color:var(--cream);font-family:"EB Garamond",Georgia,serif;min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:2rem;overflow:hidden;position:relative;}
+    .tile-bg{position:absolute;inset:0;pointer-events:none;}
+    .tile-bg::before{content:"";position:absolute;inset:-50%;background-image:repeating-conic-gradient(from 22.5deg at 50% 50%,rgba(201,168,76,0.04) 0deg 45deg,transparent 45deg 90deg);background-size:60px 60px;}
+    .tile-bg::after{content:"";position:absolute;inset:0;background-image:linear-gradient(rgba(201,168,76,0.05) 1px,transparent 1px),linear-gradient(90deg,rgba(201,168,76,0.05) 1px,transparent 1px);background-size:30px 30px;}
+    .content{position:relative;z-index:1;max-width:600px;}
+    .error-number{font-family:"Cinzel Decorative",serif;font-size:clamp(5rem,20vw,10rem);font-weight:700;color:var(--gold);line-height:1;opacity:0.15;letter-spacing:0.05em;}
+    .ornament{display:flex;align-items:center;gap:1rem;margin:1rem auto;}
+    .ornament-line{width:60px;height:1px;background:linear-gradient(90deg,transparent,var(--gold));}
+    .ornament-line.rev{background:linear-gradient(90deg,var(--gold),transparent);}
+    .ornament-center{font-size:1rem;color:var(--gold);line-height:1;}
+    h1{font-family:"Cinzel Decorative",serif;font-size:clamp(1.2rem,4vw,2rem);font-weight:400;color:var(--cream);letter-spacing:0.08em;margin-bottom:1rem;}
+    p{font-family:"EB Garamond",serif;font-style:italic;font-size:1.1rem;color:var(--warm);margin-bottom:2rem;line-height:1.6;}
+    .btn{font-family:"Cinzel",serif;font-size:0.68rem;letter-spacing:0.25em;text-transform:uppercase;color:var(--black);background:var(--gold);border:1px solid var(--gold);padding:1rem 2.5rem;text-decoration:none;display:inline-block;transition:background 0.25s;}
+    .btn:hover{background:var(--gold2);}
+    .footer-note{margin-top:3rem;font-family:"Cinzel",serif;font-size:0.55rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--dim);}
+  </style>
+</head>
+<body>
+  <div class="tile-bg"></div>
+  <div class="content">
+    <div class="error-number">404</div>
+    <div class="ornament">
+      <span class="ornament-line"></span>
+      <span class="ornament-center">✦</span>
+      <span class="ornament-line rev"></span>
+    </div>
+    <h1>Page Not Found</h1>
+    <p>This page has stepped out for a cut.<br>Let's get you back where you belong.</p>
+    <a href="/" class="btn">Return to Homepage</a>
+    <p class="footer-note">Mev's Barbershop &mdash; Rochester, NY</p>
+  </div>
+</body>
+</html>
